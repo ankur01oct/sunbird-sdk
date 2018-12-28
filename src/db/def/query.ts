@@ -16,6 +16,7 @@ export type UpdateQuery = {
     table: string,
     selection?: string,
     selectionArgs?: Array<string>,
+    modelJson: string
 }
 
 export type InsertQuery = {

@@ -27,7 +27,8 @@ export class KeyValueServiceImpl implements KeyValueService {
         if(readRes){
             let updateQuery:UpdateQuery={
                 table: KeyValueServiceImpl.TABLE_NAME,
-                selection:key
+                selection:key,
+                modelJson:JSON.stringify(obj)
             }
             let result = await this.dbService.update(updateQuery);
             return result;
